@@ -1,4 +1,4 @@
-# HRMS
+# Human Resource Management System (HRMS)
 
 Fronted + Backend(only in Login, Signup)
 
