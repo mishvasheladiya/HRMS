@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - HRMS</title>
+    <link rel="stylesheet" href="project.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+    
+            if (menuToggle && nav) { // Check if elements exist
+                menuToggle.addEventListener('click', function () {
+                    nav.classList.toggle('active');
+                });
+            } else {
+                console.error('Menu toggle or nav element not found.');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">HRMS</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="employee.html">Employee</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" aria-label="Toggle navigation">&#9776;</div>
+    </header>
+    <main>
+        <section class="projects-overview">
+            <h1>Projects Overview</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search projects..." />
+                <button class="add-button">Add Project</button>
+            </div>
+            <div class="project-list">
+                <h2>Active Projects</h2>
+                <table id="projectTable">
+                    <thead>
+                        <tr>
+                            <th>Project ID</th>
+                            <th>Project Name</th>
+                            <th>Start Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example rows; dynamically generated with server-side code -->
+                        <tr>
+                            <td>1</td>
+                            <td>Website Redesign</td>
+                            <td>2024-01-10</td>
+                            <td>In Progress</td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="delete-button">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>HRMS Integration</td>
+                            <td>2024-02-15</td>
+                            <td>Completed</td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="delete-button">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="project-management">
+                <h2>Manage Projects</h2>
+                <form id="projectForm">
+                    <div class="form-group">
+                        <label for="projectName">Project Name:</label>
+                        <input type="text" id="projectName" name="projectName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status:</label>
+                        <select id="status" name="status" required>
+                            <option value="not-started">Not Started</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Save Project</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="employee.html">Employee</a></li>
+                    <li><a href="attendance.html">Attendance</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@hrms.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>HRMS provides comprehensive human resource management solutions to streamline your business operations and enhance employee engagement.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+    
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', function () {
+                    nav.classList.toggle('active');
+                });
+            } else {
+                console.error('Menu toggle or nav element not found.');
+            }
+        });
+    </script>
+</body>
+</html>

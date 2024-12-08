@@ -1,0 +1,360 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Base Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d99;
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a8d0e6;
+}
+
+
+
+
+nav ul li a:focus, .signup-button:focus {
+    outline: 2px solid #00bfae;
+    outline-offset: 4px;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-top: 15px;
+    }
+}
+
+/* Toggle Menu JavaScript */
+
+
+main {
+    padding: 30px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    font-size: 36px;
+    color: #004d99;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Base Styles */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 20px;
+}
+
+.stat {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px; /* Minimum width to maintain layout */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.stat h2 {
+    margin-top: 0;
+    color: #004d99;
+}
+
+.stat p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        gap: 10px; /* Reduce gap on smaller screens */
+    }
+
+    .stat {
+        min-width: 100%; /* Full width on small screens */
+    }
+}
+
+/* Graph Container */
+.graph-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.graph-container h2 {
+    margin-top: 0;
+    color: #004d99;
+    text-align: center;
+}
+
+/* Ensure the canvas takes full width of its container */
+#performanceGraph {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #performanceGraph {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+#performanceGraph {
+    width: 100%;
+    height: 300px;
+}
+
+.notifications, .events, .spotlight {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notifications h2, .events h2, .spotlight h2 {
+    color: #004d99;
+}
+
+.notifications ul, .events ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications li, .events li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Base Styles */
+.spotlight {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.spotlight h2 {
+    margin-top: 0;
+    color: #004d99;
+    text-align: center;
+}
+
+.spotlight-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.spotlight-content img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.spotlight-info {
+    flex: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .spotlight-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .spotlight-content img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .spotlight-info p {
+        font-size: 14px; /* Adjust font size for very small screens */
+    }
+}
+
+/* Base Footer Styles */
+footer {
+    background-color: #004d99;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.footer-links, .footer-contact, .footer-about {
+    flex: 1;
+    min-width: 200px; /* Minimum width to ensure content doesn’t get too squeezed */
+}
+
+.footer-links h3, .footer-contact h3, .footer-about h3 {
+    margin-top: 0;
+    color: #a8d0e6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p, .footer-about p {
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to start for better spacing */
+    }
+
+    .footer-links, .footer-contact, .footer-about {
+        margin-bottom: 20px;
+        min-width: auto; /* Remove minimum width for stacking layout */
+    }
+
+    .footer-contact, .footer-about {
+        flex: 1 1 100%; /* Allow these sections to take full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links ul {
+        padding-left: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 5px; /* Reduce margin on very small screens */
+    }
+
+    .footer-contact p, .footer-about p {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+    
+            if (menuToggle && nav) { // Check if elements exist
+                menuToggle.addEventListener('click', function () {
+                    nav.classList.toggle('active');
+                });
+            } else {
+                console.error('Menu toggle or nav element not found.');
+            }
+        });
+    </script>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">HRMS</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="employee.html">Employee</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        
+        <div class="menu-toggle" aria-label="Toggle navigation">&#9776;</div>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h1>Welcome to HRMS</h1>
+            <p>Your comprehensive solution for managing human resources efficiently.</p>
+        </section>
+        <section class="dashboard">
+            <div class="stats">
+                <div class="stat">
+                    <h2>Employee Overview</h2>
+                    <p>Get insights into employee data, performance, and more.</p>
+                </div>
+                <div class="stat">
+                    <h2>Project Status</h2>
+                    <p>Track the progress and status of ongoing projects.</p>
+                </div>
+                <div class="stat">
+                    <h2>Attendance Report</h2>
+                    <p>View and analyze attendance records and trends.</p>
+                </div>
+            </div>
+            <div class="graph-container">
+                <h2>Performance Graph</h2>
+                <canvas id="performanceGraph"></canvas>
+            </div>
+        </section>
+        <section class="notifications">
+            <h2>Recent Notifications</h2>
+            <ul>
+                <li>New company policy update.</li>
+                <li>Reminder: Submit your timesheets by Friday.</li>
+                <li>Upcoming holiday: Office closed on August 15.</li>
+            </ul>
+        </section>
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Team Building Workshop - August 10</li>
+                <li>Annual Company Picnic - August 20</li>
+                <li>Quarterly Review Meeting - September 5</li>
+            </ul>
+        </section>
+        <section class="spotlight">
+            <h2>Employee Spotlight</h2>
+            <div class="spotlight-content">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Employee Photo">
+                <div class="spotlight-info">
+                    <h3>John Doe</h3>
+                    <p>John is our lead developer with over 10 years of experience in software engineering. His dedication and innovative approach have significantly contributed to our recent product successes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="employee.html">Employee</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="attendance.html">Attendance</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@hrms.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>HRMS provides comprehensive human resource management solutions to streamline your business operations and enhance employee engagement.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

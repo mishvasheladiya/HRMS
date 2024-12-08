@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management - HRMS</title>
+    <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+    <header>
+        <div class="logo">HRMS</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="employee.html">Employee</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" aria-label="Toggle navigation">&#9776;</div>
+    </header>
+    
+    <main>
+        <section class="employee-management">
+            <h1>Employee Management</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search employees..." />
+                <button class="add-button">Add Employee</button>
+            </div>
+            <table id="employeeTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jane Smith</td>
+                        <td>Software Engineer</td>
+                        <td>Development</td>
+                        <td>
+                            <button class="edit-button">Edit</button>
+                            <button class="delete-button">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>John Doe</td>
+                        <td>Project Manager</td>
+                        <td>Management</td>
+                        <td>
+                            <button class="edit-button">Edit</button>
+                            <button class="delete-button">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="attendance.html">Attendance</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@hrms.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>HRMS provides comprehensive human resource management solutions to streamline your business operations and enhance employee engagement.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+    
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', function () {
+                    nav.classList.toggle('active');
+                });
+            } else {
+                console.error('Menu toggle or nav element not found.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Base Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d99;
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a8d0e6;
+}
+
+nav ul li a:focus, .signup-button:focus {
+    outline: 2px solid #00bfae;
+    outline-offset: 4px;
+}
+
+/* Hide menu on smaller screens and show menu toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #004d99;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+}
+
+main {
+    padding: 30px;
+}
+
+/* Dashboard Page Styles */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    font-size: 36px;
+    color: #004d99;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #333;
+}
+
+
+
+/* Employee Management Page Styles */
+.employee-management {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.employee-management h1 {
+    color: #004d99;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 120px); /* Adjust input width */
+    max-width: 70%;
+    flex-grow: 1;
+    min-width: 200px; /* Minimum width for input */
+}
+
+.add-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.add-button:hover {
+    background-color: #009d89;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #004d99;
+    color: #fff;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.edit-button, .delete-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.edit-button:hover {
+    background-color: #009d89;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar input, .add-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .employee-management {
+        padding: 20px;
+    }
+
+    .employee-management h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .add-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .edit-button, .delete-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+
+/* Base Footer Styles */
+footer {
+    background-color: #004d99;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.footer-links, .footer-contact, .footer-about {
+    flex: 1;
+    min-width: 200px; /* Minimum width to ensure content doesn’t get too squeezed */
+}
+
+.footer-links h3, .footer-contact h3, .footer-about h3 {
+    margin-top: 0;
+    color: #a8d0e6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p, .footer-about p {
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to start for better spacing */
+    }
+
+    .footer-links, .footer-contact, .footer-about {
+        margin-bottom: 20px;
+        min-width: auto; /* Remove minimum width for stacking layout */
+    }
+
+    .footer-contact, .footer-about {
+        flex: 1 1 100%; /* Allow these sections to take full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links ul {
+        padding-left: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 5px; /* Reduce margin on very small screens */
+    }
+
+    .footer-contact p, .footer-about p {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+}

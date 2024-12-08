@@ -1,0 +1,617 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Base Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d99;
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a8d0e6;
+}
+
+nav ul li a:focus, .signup-button:focus {
+    outline: 2px solid #00bfae;
+    outline-offset: 4px;
+}
+
+/* Hide menu on smaller screens and show menu toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #004d99;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+}
+
+main {
+    padding: 30px;
+}
+
+/* Employee Page Styles */
+.employee-section {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.employee-section h1 {
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.add-employee-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-employee-button:hover {
+    background-color: #009d89;
+}
+
+.employee-list {
+    margin-top: 20px;
+}
+
+.employee-list h2 {
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.employee-table th, .employee-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.employee-table th {
+    background-color: #004d99;
+    color: #fff;
+}
+
+.employee-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.edit-button, .delete-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.edit-button:hover {
+    background-color: #009d89;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.add-employee-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-employee-form h2 {
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.add-employee-form .form-group {
+    margin-bottom: 15px;
+}
+
+.add-employee-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.add-employee-form input[type="text"],
+.add-employee-form input[type="email"],
+.add-employee-form input[type="tel"],
+.add-employee-form input[type="number"],
+.add-employee-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #009d89;
+}
+
+/* Projects Page Styles */
+.project-section {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-section h1 {
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.add-project-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-project-button:hover {
+    background-color: #009d89;
+}
+
+.project-list {
+    margin-top: 20px;
+}
+
+.project-list h2 {
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.project-table th, .project-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-table th {
+    background-color: #004d99;
+    color: #fff;
+}
+
+.project-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.edit-button, .delete-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.edit-button:hover {
+    background-color: #009d89;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.add-project-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-project-form h2 {
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.add-project-form .form-group {
+    margin-bottom: 15px;
+}
+
+.add-project-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.add-project-form input[type="text"],
+.add-project-form input[type="number"],
+.add-project-form textarea,
+.add-project-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #009d89;
+}
+
+/* Attendance Page Styles */
+.attendance-section {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-section h1 {
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.mark-attendance-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mark-attendance-button:hover {
+    background-color: #009d89;
+}
+
+.attendance-records {
+    margin-top: 20px;
+}
+
+.attendance-records h2 {
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attendance-table th, .attendance-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.attendance-table th {
+    background-color: #004d99;
+    color: #fff;
+}
+
+.attendance-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.submit-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #009d89;
+}
+
+/* Profile Page Styles */
+.profile-section {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section h1 {
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.profile-info, .change-password {
+    margin-top: 20px;
+}
+
+.profile-info h2, .change-password h2 {
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.profile-info .form-group, .change-password .form-group {
+    margin-bottom: 15px;
+}
+
+.profile-info label, .change-password label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.profile-info input[type="text"],
+.profile-info input[type="email"],
+.profile-info input[type="tel"],
+.profile-info textarea,
+.change-password input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.profile-info textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #00bfae;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #009d89;
+}
+
+/* Base Footer Styles */
+footer {
+    background-color: #004d99;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.footer-links, .footer-contact, .footer-about {
+    flex: 1;
+    min-width: 200px; /* Minimum width to ensure content doesn’t get too squeezed */
+}
+
+.footer-links h3, .footer-contact h3, .footer-about h3 {
+    margin-top: 0;
+    color: #a8d0e6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p, .footer-about p {
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to start for better spacing */
+    }
+
+    .footer-links, .footer-contact, .footer-about {
+        margin-bottom: 20px;
+        min-width: auto; /* Remove minimum width for stacking layout */
+    }
+
+    .footer-contact, .footer-about {
+        flex: 1 1 100%; /* Allow these sections to take full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links ul {
+        padding-left: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 5px; /* Reduce margin on very small screens */
+    }
+
+    .footer-contact p, .footer-about p {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+}

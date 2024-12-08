@@ -1,0 +1,69 @@
+.auth-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h1 {
+    margin-bottom: 20px;
+    color: #004d99;
+    text-align: center;
+}
+
+.auth-form label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: #333;
+}
+
+.auth-form input[type="checkbox"] {
+    margin: 0; /* Remove default margin */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.auth-form p {
+    margin: 0; /* Remove default margin around p tag */
+}
+
+.auth-form label p {
+    margin: 0; /* Remove margin from p inside label */
+    margin-left: 8px; /* Add space between checkbox and text */
+    line-height: 1.5; /* Adjust line height for better alignment */
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bfae;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+    background-color: #009d89;
+}
+
+.auth-form a {
+    color: #00bfae;
+    text-decoration: none;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+}
